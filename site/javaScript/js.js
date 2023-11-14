@@ -2,19 +2,19 @@ const entities = [
     {
       text1: 'Rostov-on-Don LCD admiral',
       text2: '3.5 months',
-      text3: '81 m<sup>2</sup>',
+      text3: '81 m2',
       img: 'site/img/image1.png'
     },
     {
       text1: 'Sochi Thieves',
       text2: '4 months',
-      text3: '105 m<sup>2</sup>',
+      text3: '105 m2',
       img: 'site/img/image2.png'
     },
     {
       text1: 'Rostov-on-Don Patriotic',
       text2: '3 months',
-      text3: '93 m<sup>2</sup>',
+      text3: '93 m2',
       img: 'site/img/image3.png'
     }
   ]
