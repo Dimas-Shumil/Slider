@@ -7,7 +7,7 @@
 a {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.30);
-    padding-bottom: 3px ;
+    padding-bottom: 3px;
 }
 
 a:hover {
@@ -16,7 +16,6 @@ a:hover {
 
 p {
     color: #FFF;
-
     font-family: Nunito Sans;
     font-size: 14px;
     font-style: normal;
@@ -49,16 +48,24 @@ h2 {
 }
 
 .desktop {
-    background-color: #ffffff;
+    /* background-color: #ffffff;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 100%;
+    width: 100%; */
+    display: flex;
+    overflow: hidden;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: start;
+    background-color: #FFF;
+    margin: 0 12px;
 }
 
 .desktop .overlap-group-wrapper {
     display: flex;
     justify-content: center;
+    
     align-items: center;
     position: relative;
     background-color: #ffffff;
@@ -71,7 +78,7 @@ h2 {
 .box {
     position: relative;
     display: flex;
-    flex-direction: column;
+   flex-flow: column wrap;
     justify-content: end;
     align-items: end;
     gap: 45px;
@@ -102,8 +109,9 @@ h2 {
 
 .box__text-himg {
     display: flex;
-    
+
 }
+
 .box__text {
     display: flex;
     flex-direction: column;
@@ -127,15 +135,17 @@ h2 {
     width: 679px;
     height: 482px;
 }
+
 .box__list1 {
     display: flex;
     justify-content: space-between;
-   
+
 }
+
 .box__list2 {
-   display: flex;
-   flex-direction: column;
-   gap: 34px;
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
 
 }
 
@@ -149,27 +159,35 @@ h2 {
     font-size: 20px;
     font-weight: 700;
 }
+
 .group a {
     text-decoration: none;
 }
+
 .group a:hover {
     color: #FFF;
 }
+
 .group a:active {
     color: #FFF;
 }
+
 .group a:visited {
     color: #FFF;
 }
+
 .next a {
     color: #FFF;
 }
+
 .next a:active {
     color: rgba(255, 255, 255, 0.30);
 }
+
 .prev a {
     color: #FFF;
 }
+
 .prev a:active {
-    color:rgba(255, 255, 255, 0.30) ;
+    color: rgba(255, 255, 255, 0.30);
 }
