@@ -4,90 +4,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Слайдер проектов компании - примеры выполненных работ">
+    <meta name="keywords" content="ремонт, дизайн, проекты, слайдер">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
     <link rel="stylesheet" href="site/styles/style1.css">
-    <title>Slider</title>
+    <title>Слайдер проектов | IC "Repair Design Project"</title>
 </head>
 
 <body>
     <div class="desktop">
-        
         <div class="overlap-group-wrapper">
-
-            <div class="box">
-
-                <div class="box__nav">
-                    <a class="sl11 link link--active" href="#">Rostov-on-Don, Admiral</a>
-                    <a class="sl21 link" href="#">Sochi Thieves</a>
-                    <a class="sl31 link" href="#">Rostov-on-Don Patriotic</a>
+            <div class="box" role="region" aria-label="Слайдер проектов" aria-roledescription="карусель">
+                
+                <!-- Навигация по проектам (текстовые ссылки) -->
+                <div class="box__nav" role="tablist" aria-label="Проекты">
+                    <a class="nav-link nav-link--active" 
+                       href="#" 
+                       data-index="0"
+                       role="tab"
+                       aria-selected="true"
+                       aria-controls="slide-0"
+                       id="tab-0">Rostov-on-Don, Admiral</a>
+                    <a class="nav-link" 
+                       href="#" 
+                       data-index="1"
+                       role="tab"
+                       aria-selected="false"
+                       aria-controls="slide-1"
+                       id="tab-1">Sochi Thieves</a>
+                    <a class="nav-link" 
+                       href="#" 
+                       data-index="2"
+                       role="tab"
+                       aria-selected="false"
+                       aria-controls="slide-2"
+                       id="tab-2">Rostov-on-Don Patriotic</a>
                 </div>
 
                 <div class="box_text-img">
-
-                    <div class="box__text">
-
+                    <!-- Контент слайда -->
+                    <div class="box__text" 
+                         id="slide-0"
+                         role="tabpanel"
+                         aria-labelledby="tab-0"
+                         aria-roledescription="слайд">
+                        
                         <div class="box__text-himg">
-
                             <h1>Completed<br>projects</h1>
-                            <img class="completed-projects" src="site/img/Rectangle 6.2.png" />
-
+                            <img class="completed-projects" 
+                                 src="site/img/Rectangle 6.2.png" 
+                                 alt=""
+                                 aria-hidden="true">
                         </div>
 
-                        <p>
+                        <p class="project-description">
                             Only a small part of the work performed by our company is presented on the site. For 14
                             years on in the construction market we have made happy more than 1000 families
                         </p>
 
-                        <div class="box__list1">
-
-                            <div class="box__list2">
-
-                                <div>
-                                    <h2>CITY:</h2>
-                                    <p class="text1">Rostov-on-Don LCD admiral</p>
+                        <dl class="project-specs">
+                            <div class="specs-row">
+                                <div class="specs-item">
+                                    <dt>City:</dt>
+                                    <dd class="text1">Rostov-on-Don LCD admiral</dd>
                                 </div>
-                                <div>
-                                    <h2>Repair time:</h2>
-                                    <p class="text2">3.5 months</p>
-
+                                <div class="specs-item">
+                                    <dt>Repair time:</dt>
+                                    <dd class="text2">3.5 months</dd>
                                 </div>
-
                             </div>
-
-                            <div class="box__list2">
-
-                                <div>
-                                    <h2>APARTMENT AREA:</h2>
-                                    <p class="text3">81 m2</p>
+                            <div class="specs-row">
+                                <div class="specs-item">
+                                    <dt>Apartment area:</dt>
+                                    <dd class="text3">81 m<sup>2</sup></dd>
                                 </div>
-
-                                <div>
-
-                                    <h2>Repair Cost:</h2>
-                                    <p>Upon request</p>
+                                <div class="specs-item">
+                                    <dt>Repair Cost:</dt>
+                                    <dd class="text4">Upon request</dd>
                                 </div>
-
                             </div>
-                        </div>
+                        </dl>
 
-                        <div class="group">
-                            <div class="prev"><a href="#"> &larr;</a></div>
-                            <div class="sl1"><a href="#"> &bull;</a></div>
-                            <div class="sl2"><a href="#"> &bull;</a></div>
-                            <div class="sl3"><a href="#"> &bull;</a></div>
-                            <div class="next"><a href="#"> &rarr;</a></div>
+                        <!-- Навигация (точки и стрелки) -->
+                        <div class="group" role="group" aria-label="Управление слайдером">
+                            <button class="nav-arrow prev" aria-label="Предыдущий проект">
+                                <span aria-hidden="true">&larr;</span>
+                            </button>
+                            
+                            <div class="dots-container" role="tablist" aria-label="Выбор проекта">
+                                <button class="nav-dot activedot" 
+                                        data-index="0"
+                                        role="tab"
+                                        aria-selected="true"
+                                        aria-label="Проект 1: Rostov-on-Don, Admiral"
+                                        aria-controls="slide-0">
+                                    <span aria-hidden="true">&bull;</span>
+                                </button>
+                                <button class="nav-dot" 
+                                        data-index="1"
+                                        role="tab"
+                                        aria-selected="false"
+                                        aria-label="Проект 2: Sochi Thieves"
+                                        aria-controls="slide-1">
+                                    <span aria-hidden="true">&bull;</span>
+                                </button>
+                                <button class="nav-dot" 
+                                        data-index="2"
+                                        role="tab"
+                                        aria-selected="false"
+                                        aria-label="Проект 3: Rostov-on-Don Patriotic"
+                                        aria-controls="slide-2">
+                                    <span aria-hidden="true">&bull;</span>
+                                </button>
+                            </div>
+                            
+                            <button class="nav-arrow next" aria-label="Следующий проект">
+                                <span aria-hidden="true">&rarr;</span>
+                            </button>
                         </div>
-
                     </div>
 
-                    <div class="box__img">
-                        <!-- <img src="site/img/image 2.1.png" alt="room"> -->
+                    <!-- Изображение -->
+                    <div class="box__img" 
+                         role="img"
+                         aria-label="Изображение текущего проекта"
+                         style="background-image: url('site/img/image1.png');">
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
-    <script async src="site/javaScript/js.js"></script>
+    
+    <script src="site/javaScript/js.js" defer></script>
 </body>
 
 </html>

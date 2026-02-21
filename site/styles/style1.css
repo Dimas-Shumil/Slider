@@ -191,3 +191,123 @@ h2 {
 .prev a:active {
     color: rgba(255, 255, 255, 0.30);
 }
+/* Базовые стили для слайдера */
+.box {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.box__nav {
+    display: flex;
+    gap: 60px;
+    margin-bottom: 30px;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.3);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.nav-link--active {
+    color: #E3B873;
+    text-decoration: underline;
+}
+
+.box_text-img {
+    display: flex;
+    gap: 50px;
+}
+
+.box__text {
+    flex: 1;
+}
+
+.box__img {
+    flex: 1;
+    min-height: 400px;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.3s ease;
+}
+
+.project-specs {
+    margin: 40px 0;
+}
+
+.specs-row {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+.specs-item dt {
+    color: #E3B873;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.specs-item dd {
+    margin: 0;
+    font-size: 16px;
+    color: #fff;
+}
+
+.group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-arrow {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.nav-arrow:hover {
+    color: #E3B873;
+}
+
+.dots-container {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-dot {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.nav-dot.activedot {
+    color: #fff;
+}
+
+.nav-dot:hover {
+    color: #E3B873;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .box_text-img {
+        flex-direction: column;
+    }
+    
+    .box__nav {
+        justify-content: center;
+    }
+    
+    .specs-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
